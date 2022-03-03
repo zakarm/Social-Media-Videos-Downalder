@@ -17,7 +17,7 @@
     <script>
         var keyApi = "YOURAPIKEY";
         function data()
-        {
+        
             var keyword = document.getElementsByTagName('input')[0].value;
             fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key="+keyApi)
 
