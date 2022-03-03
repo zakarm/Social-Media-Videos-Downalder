@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <input type="text" placeholder="video">
+        <input type="button" value="serach">
+        <div></div>
+    </center>
+
+    <script>
+        var keyApi = "AIzaSyDDO_CHAw1yQ4rwqwCiwyIwFNpoIn5qMqg";
+        function data()
+        {
+            var keyword = document.getElementsByTagName('input')[0].value;
+            fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key="+keyApi)
+
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(data => {
+                        console.log(data);
+                        for (var i in data.items)
+                        {
+                            var da = data["items"][i].snippet.thumbnails.default.url;
+                            var link =  data["items"][i].id.videId;
+                            window.document.getElementsByTagName('div')[0].innerHTML += '<p><a href="https://www.youtube.com/watch?v='+link+'"><img src="'+da+'"></img></a><br><input type="button" value="download"></p>';
+                        }
+                    })
+        }
+       window.document.getElementsByTagName('input')[1].onclick = data;
+    </script>
+    
+</body>
+</html>
