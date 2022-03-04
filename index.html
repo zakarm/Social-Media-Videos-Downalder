@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Asgard Downloader | Social Media Videos Downloader</title>
+    <title>You Downloader | Social Media Videos Downloader</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,31 @@
     <link rel="stylesheet" href="assets/css/templatemo-digimedia-v1.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    <style>
+     .btnop{
+       height: 80%;
+       font-size: small;
+       display:grid;
+     }
+     .h5s
+     {
+       color: black;
+     }
+
+     .imgs
+     {
+       border-radius: 20px;
+       width: 50%;
+     }
+
+     @media screen and (max-width : 600px) {
+       .imgs
+        {
+          border-radius: 5px;
+          width: 80%;
+        }
+     }
+    </style>
 </head>
 <body>
 
@@ -85,8 +110,6 @@
                    <!--<li class="scroll-to-section"><a href="#blog">Blog</a></li>
                   <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
                  <li class="scroll-to-section"><div class="border-first-button"><a href="#contact">Free Quote</a></div></li> -->
-
-
                 </ul>        
                 <a class='menu-trigger'>
                     <span>Menu</span>
@@ -108,19 +131,18 @@
                   <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <div class="row">
                       <div class="col-lg-12">
-                        <h6>You Downloader</h6>
+                        <h6>You  Downloader</h6>
                         <h2>YouTube to Mp3 | Mp4 Converter</h2>
-                        
                         <div class="col-lg-12">
-                          <div style="background-color: #fa65b1 ;" class="d-none d-xl-flex align-items-center py-3 ps-8 pe-2 rounded-3">
+                          <div style="background-color: #fa65b1 ;" class="d-flex d-xl-flex align-items-center py-3 ps-8 pe-2 rounded-3">
                             <svg class="flex-shrink-0 me-2" style="width: 24px; height: 18px; margin-left:4px;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" data-config-id="auto-svg-1-1">
                               <path d="M17.5 17.1309L12.5042 11.9551" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                               <path d="M7.27524 13.8672C10.8789 13.8672 13.8002 10.945 13.8002 7.34033C13.8002 3.73565 10.8789 0.813477 7.27524 0.813477C3.67159 0.813477 0.750244 3.73565 0.750244 7.34033C0.750244 10.945 3.67159 13.8672 7.27524 13.8672Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
-                            <input class="form-control bg-white border-0 me-2" type="text" placeholder="Name of the mp3 to download...">
+                            <input id="data1" class="form-control bg-white border-0 me-2" type="text" placeholder="Name of the mp3 to download...">
+                            <a id="btn1" href="#services" class="form-control bg-white border-0 me-2" type="button" style="width: 20%;">Search</a>
                           </div>
                         </div>
-                     
                         <br>
                         <p>You Downloader allows you to download Youtube videos to mp3 format, it is the fastest and easiest converter site on the web, no installation or registration is necessary for you, all you need to do is search or directly copy the url of your choice in the field above</p>
                       </div>
@@ -144,7 +166,7 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-                <h4>Youtube <em>Videos</em></h4>
+                <h4>Search <em>Result</em></h4>
                 <div class="line-dec"></div>
               </div>
             </div>
@@ -153,123 +175,40 @@
                 <div class="grid">
                   <div class="row">
                     <div class="col-lg-12">
-                      <ul class="nacc">
-                        <li class="active">
-                          <div>
-                            <div class="thumb">
-                              <div class="row">
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="left-text">
-                                    <h4>SEO Analysis &amp; Daily Reports</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                      dover lipsum lorem and the others.</p>
-                                    <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                      <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="right-image">
-                                    <img src="assets/images/services-image.jpg" alt="">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                      <div class="card border-1 shadow" style="border-radius: 30px;">
+                        <div class="table-responsive align-self-center col-lg-8">
+                            <table class="table select-table">
+                              <thead>
+                                  <tr>
+                                    <th>Photo</th>
+                                    <th>Title</th>
+                                    <th>MP3</th>
+                                    <th>MP4</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="newdata">
+                                  <tr onclick="myFunction(this)">
+                                    <td>
+                                      <div class="d-flex">
+                                          <img src="https://i.ytimg.com/vi/wImcF3erQYA/default.jpg"  class="imgs img-fluid" alt="quixote">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <h9 class="h5s">"1 - JavaScript (Darija) | تعلم معانا لغة الجافا سكريبت"</h9> 
+                                    </td>
+                                    <td>
+                                      <a class="btnop btn btn-primary btn-lg text-white mb-0 me-0">MP3</a>
+                                    </td>
+                                    <td>
+                                       <a class="btnop btn btn-primary btn-lg text-white mb-0 me-0">MP4</a>
+                                    </td>
+                                  </tr>
+                                  
+                                  
+                               </tbody>
+                            </table>
                           </div>
-                        </li>
-                        <li>
-                          <div>
-                            <div class="thumb">
-                              <div class="row">
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="left-text">
-                                    <h4>Healthy Food &amp; Life</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                      dover lipsum lorem and the others.</p>
-                                    <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                      <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="right-image">
-                                    <img src="assets/images/services-image-02.jpg" alt="">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                            <div class="thumb">
-                              <div class="row">
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="left-text">
-                                    <h4>Car Re-search &amp; Transport</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                      dover lipsum lorem and the others.</p>
-                                    <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                      <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="right-image">
-                                    <img src="assets/images/services-image-03.jpg" alt="">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                            <div class="thumb">
-                              <div class="row">
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="left-text">
-                                    <h4>Online Shopping &amp; Tracking ID</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                      dover lipsum lorem and the others.</p>
-                                    <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                      <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="right-image">
-                                    <img src="assets/images/services-image-04.jpg" alt="">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                            <div class="thumb">
-                              <div class="row">
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="left-text">
-                                    <h4>Enjoy &amp; Travel</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                      dover lipsum lorem and the others.</p>
-                                    <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                      <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6 align-self-center">
-                                  <div class="right-image">
-                                    <img src="assets/images/services-image.jpg" alt="">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                      </div>
                     </div>          
                   </div>
                 </div>
@@ -668,26 +607,46 @@
       <script src="assets/js/custom.js"></script>
       <script>
         var keyApi = "AIzaSyDDO_CHAw1yQ4rwqwCiwyIwFNpoIn5qMqg";
-        function data()
+                function myFunction(x) {
+          alert("Row index is: " + x.rowIndex);
+        }
+       async function dataFunction()
         {
+          var jsonfile;
         
-            var keyword = document.getElementsByTagName('input')[0].value;
-            fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key="+keyApi)
+            var keyword = document.getElementById("data1").value;
 
-                    .then(response => {
-                        return response.json()
-                    })
-                    .then(data => {
-                        console.log(data);
+            const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key="+keyApi);
+            var data = await response.json();
+            console.log(data);
+            window.document.getElementById("newdata").innerHTML = " "
                         for (var i in data.items)
                         {
                             var da = data["items"][i].snippet.thumbnails.default.url;
                             var link =  data["items"][i].id.videId;
-                            window.document.getElementsByTagName('div')[0].innerHTML += '<p><a href="https://www.youtube.com/watch?v='+link+'"><img src="'+da+'"></img></a><br><input type="button" value="download"></p>';
+                            var title = data["items"][i].snippet.title;
+                            
+                            window.document.getElementById("newdata").innerHTML += '<tr onclick="myFunction(this)">'+
+                                    '<td>'+
+                                      '<div class="d-flex">'+
+                                          '<img src="'+da+'"  class="imgs img-fluid" alt="quixote">'+
+                                      '</div>'+
+                                    '</td>'+
+                                    '<td>'+
+                                      '<h9 class="h5s">"'+title+'"</h9> '+
+                                    '</td>'+
+                                    '<td>'+
+                                      '<a class="btnop btn btn-primary btn-lg text-white mb-0 me-0">MP3</a>'+
+                                   '</td>'+
+                                   '<td>'+
+                                      '<a class="btnop btn btn-primary btn-lg text-white mb-0 me-0">MP4</a>'+
+                                   '</td>'+
+                                  '</tr>';
                         }
-                    })
+                       
+                   
         }
-       window.document.getElementsByTagName('input')[1].onclick = data;
+       window.document.getElementById("btn1").onclick = dataFunction;
       </script>
     
 </body>
