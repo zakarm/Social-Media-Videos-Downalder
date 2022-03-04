@@ -26,12 +26,12 @@
      .btnop{
        height: 80%;
        font-size: small;
-       display:grid;
+      
      }
      .h5s
      {
        color: black;
-       width: 40%;
+       width: 20%;
      }
 
      .imgs
@@ -40,13 +40,35 @@
        width: 50%;
      }
 
-     @media screen and (max-width : 600px) {
+     @media screen and (max-width : 400px) {
        .imgs
         {
           border-radius: 5px;
           width: 80%;
         }
-        
+        .btnop
+        {
+          height: 80%;
+          font-size: small;
+          display:table-row;
+          font-size: small;
+          
+        }
+
+        #btn1
+        {
+          font-size:small;
+        }
+
+        #data1{
+          font-size: small;
+        }
+
+        #title1
+        {
+          font-size: x-large;
+        }
+
      }
     </style>
 </head>
@@ -62,28 +84,6 @@
         </div>
       </div>
 
-      <!-- Pre-header Starts 
-      <div class="pre-header">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-sm-8 col-7">
-              <ul class="info">
-                <li><a href="#"><i class="fa fa-envelope"></i>zakariaemrabet48@gmail.com</a></li>
-                <li><a href="#"><i class="fa fa-phone"></i>+212766746532</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-4 col-sm-4 col-5">
-              <ul class="social-media">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>-->
-    
       <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
         <div class="container">
           <div class="row">
@@ -115,9 +115,9 @@
                 <div class="col-lg-6 align-self-center">
                   <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <div class="row">
-                      <div class="col-lg-12">
+                      <div  class="col-lg-12">
                         <h6>You Downloader</h6>
-                        <h2>YouTube to Mp3 | Mp4 Converter</h2>
+                        <h2 id="title1">YouTube to Mp3 | Mp4 Converter</h2>
                         <div class="col-lg-12">
                           <div style="background-color: #fa65b1 ;" class="d-flex d-xl-flex align-items-center py-3 ps-8 pe-2 rounded-3">
                             <svg class="flex-shrink-0 me-2" style="width: 24px; height: 18px; margin-left:4px;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" data-config-id="auto-svg-1-1">
@@ -160,7 +160,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="card border-1 shadow" style="border-radius: 30px;">
-                        <div class="table-responsive align-self-center col-lg-8">
+                        <div class="table-responsive align-self-center">
                             <table class="table table-hover">
                               <thead>
                                   <tr>
@@ -171,7 +171,7 @@
                                   </tr>
                               </thead>
                               <tbody id="newdata">
-                                  
+                                  <!--data-->
                                </tbody>
                             </table>
                           </div>
@@ -336,7 +336,7 @@
                           <div class="info-post">
                             <div class="icon">
                               <img src="assets/images/email-icon.png" alt="">
-                              <a href="#">zakariaemrabet48@gmail.com</a>
+                              <a  href="#">@zaka_rm</a>
                             </div>
                           </div>
                         </div>
@@ -379,10 +379,6 @@
         </div>
       </div>
 
-      <!-- Button trigger modal -->
-     
-
-     
       <div class="modal" id="exampleModalCenter" role="dialog" style="background: rgba(51, 170, 51, .1) ;" >
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -411,8 +407,6 @@
           </div>
         </div>
       </footer>
-    
-    
       <!-- Scripts -->
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -439,11 +433,10 @@
             const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key="+keyApi);
             data = await response.json();
             console.log(data);
-            window.document.getElementById("newdata").innerHTML = " "
+            window.document.getElementById("newdata").innerHTML = " ";
                         for (var i in data.items)
                         {
                             var da = data["items"][i].snippet.thumbnails.default.url;
-                           
                             var title = data["items"][i].snippet.title;
                             window.document.getElementById("newdata").innerHTML += '<tr onclick="myFunction(this)">'+
                                     '<td>'+
@@ -464,7 +457,6 @@
                         }
         }
 
-       
        function myFunction(x) 
         {
           linktodown ="https://www.youtube.com/watch?v="+data["items"][x.rowIndex - 1].id.videoId;
@@ -487,6 +479,5 @@
         }
        window.document.getElementById("btn1").onclick = dataFunction;
       </script>
-    
 </body>
 </html>
