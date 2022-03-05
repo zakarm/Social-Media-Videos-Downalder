@@ -23,6 +23,8 @@
     .h5s{color: black; width: 20%;}
     .imgs{border-radius: 20px; width: 50%;}
     #div1{background-color: #fa65b1;}
+    #exampleModalCenter{background: rgba(245, 103, 209, .1)  ;}
+    #btn1{width: 20%;}
      @media screen and (max-width : 400px) {
         .imgs{border-radius: 5px;width: 80%;}
         .btnop{height: 80%;font-size: small;display:table-row;font-size: small;}
@@ -84,7 +86,7 @@
                               <path d="M7.27524 13.8672C10.8789 13.8672 13.8002 10.945 13.8002 7.34033C13.8002 3.73565 10.8789 0.813477 7.27524 0.813477C3.67159 0.813477 0.750244 3.73565 0.750244 7.34033C0.750244 10.945 3.67159 13.8672 7.27524 13.8672Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                             <input id="data1" class="form-control bg-white border-0 me-2" type="text" placeholder="Name of the mp3 to download...">
-                            <a id="btn1" href="#services" class="form-control bg-white border-0 me-2" type="button" style="width: 20%;">Search</a>
+                            <a id="btn1" href="#services" class="form-control bg-white border-0 me-2" type="button">Search</a>
                           </div>
                         </div>
                         <br>
@@ -325,7 +327,7 @@
         </div>
       </div>
 
-      <div class="modal" id="exampleModalCenter" role="dialog" style="background: rgba(51, 170, 51, .1) ;" >
+      <div class="modal" id="exampleModalCenter" role="dialog" >
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -369,38 +371,41 @@
         }
          var linktodown;
          var linktodownonly;
-        var data;
-         var keyApi = "AIzaSyDDO_CHAw1yQ4rwqwCiwyIwFNpoIn5qMqg";
+         var data;
+         var z = "CHAw1yQ4rwqwCiwyIwF";
          
         
        async function dataFunction()
         {
+
            var keyword = document.getElementById("data1").value;
-            const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key="+keyApi);
-            data = await response.json();
-            console.log(data);
-            window.document.getElementById("newdata").innerHTML = " ";
-                        for (var i in data.items)
-                        {
-                            var da = data["items"][i].snippet.thumbnails.default.url;
-                            var title = data["items"][i].snippet.title;
-                            window.document.getElementById("newdata").innerHTML += '<tr onclick="myFunction(this)">'+
-                                    '<td>'+
-                                      '<div class="d-flex">'+
-                                          '<img src="'+da+'"  class="imgs img-fluid" alt="quixote">'+
-                                      '</div>'+
+           
+              const response = await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q="+keyword+"&type=video&key=AIzaSyDDO_"+z+"NpoIn5qMqg");
+              data = await response.json();
+              console.log(data);
+              window.document.getElementById("newdata").innerHTML = " ";
+                          for (var i in data.items)
+                          {
+                              var da = data["items"][i].snippet.thumbnails.default.url;
+                              var title = data["items"][i].snippet.title;
+                              window.document.getElementById("newdata").innerHTML += '<tr onclick="myFunction(this)">'+
+                                      '<td>'+
+                                        '<div class="d-flex">'+
+                                            '<img src="'+da+'"  class="imgs img-fluid" alt="quixote">'+
+                                        '</div>'+
+                                      '</td>'+
+                                      '<td>'+
+                                        '<h9 class="h5s">"'+title+'"</h9> '+
+                                      '</td>'+
+                                      '<td>'+
+                                        '<a class="btnop btn btn-primary btn-lg text-white mb-0 me-0" onclick="downloaderMP3()">MP3</a>'+
                                     '</td>'+
                                     '<td>'+
-                                      '<h9 class="h5s">"'+title+'"</h9> '+
+                                        '<a  class="btnop btn btn-primary btn-lg text-white mb-0 me-0" onclick="downloaderMP4()">MP4</a>'+
                                     '</td>'+
-                                    '<td>'+
-                                      '<a class="btnop btn btn-primary btn-lg text-white mb-0 me-0" onclick="downloaderMP3()">MP3</a>'+
-                                   '</td>'+
-                                   '<td>'+
-                                      '<a  class="btnop btn btn-primary btn-lg text-white mb-0 me-0" onclick="downloaderMP4()">MP4</a>'+
-                                   '</td>'+
-                                  '</tr>';
-                        }
+                                    '</tr>';
+                          }
+           
         }
 
        function myFunction(x) 
